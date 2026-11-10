@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/*
+ * Homebuzz design tokens.
+ * Concept: "the calm after the clearance" — navy carries authority and type,
+ * green is the single action colour, paper and mint are the quiet grounds.
+ * Rules: no box shadows (elevation = border + surface step), buttons are
+ * rounded-full, images use the "leaf" mask (two large opposite corners).
+ */
+@theme {
+  --color-navy: #1b3a5c;
+  --color-navy-900: #142d48;
+  --color-navy-950: #0f2236;
+  --color-green: #1f5c3a;
+  --color-green-700: #184a2e;
+  --color-green-300: #9cc3a8;
+  --color-mint: #eaf2ec;
+  --color-mint-200: #d6e6da;
+  --color-paper: #f7f9f7;
+  --color-ink: #1d2935;
+  --color-muted: #667085;
+  --color-muted-strong: #4b5565;
+  --color-line: #dfe5e0;
+  --color-error: #a63a2b;
+  --color-error-bg: #fbeeeb;
+
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-manrope), ui-sans-serif, sans-serif;
+
+  --radius-leaf: 2.5rem;
+
+  --text-display: clamp(2.75rem, 1.6rem + 4.6vw, 5.5rem);
+  --text-display--line-height: 1.02;
+  --text-display--letter-spacing: -0.03em;
+  --text-h2: clamp(2rem, 1.45rem + 2.2vw, 3.25rem);
+  --text-h2--line-height: 1.06;
+  --text-h2--letter-spacing: -0.025em;
+  --text-h3: 1.375rem;
+  --text-h3--line-height: 1.25;
+  --text-lead: 1.1875rem;
+  --text-lead--line-height: 1.6;
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--letter-spacing: 0.1em;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Keep focused fields and #anchors clear of the sticky header. */
+    scroll-padding-top: 8rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-navy);
+    text-wrap: balance;
+    font-weight: 600;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-green);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  .on-dark :focus-visible {
+    outline-color: var(--color-green-300);
+  }
+  ::selection {
+    background: var(--color-mint-200);
+    color: var(--color-navy);
+  }
+}
+
+@utility leaf {
+  border-radius: var(--radius-leaf) 0.75rem var(--radius-leaf) 0.75rem;
+}
+
+@utility leaf-lg {
+  border-radius: 5rem 1rem 5rem 1rem;
+  @media (max-width: 640px) {
+    border-radius: 3rem 0.75rem 3rem 0.75rem;
+  }
+}
+
+@utility eyebrow {
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--text-eyebrow--letter-spacing);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slide-in {
+  from { transform: translateX(24px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
