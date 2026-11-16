@@ -5,6 +5,38 @@
  * IMPORTANT: Anything set to `null` is shown on the site as a clearly marked
  * placeholder. Only fill in details that are real and confirmed.
  */
+
+/** Live production URL. Used when NEXT_PUBLIC_SITE_URL is missing or invalid. */
+const PRODUCTION_URL = "https://home-buzz.vercel.app";
+
+/** Dot-separated labels of letters, digits and inner hyphens (e.g. "home-buzz.vercel.app"). */
+const HOSTNAME_PATTERN = /^(?!-)[a-z\d-]{1,63}(?<!-)(\.(?!-)[a-z\d-]{1,63}(?<!-))+$/i;
+
+/**
+ * Normalises NEXT_PUBLIC_SITE_URL to a bare origin (no path, no trailing slash).
+ * Accepts only http/https URLs with a real hostname. Never throws.
+ */
+function resolveSiteUrl(raw: string | undefined): string {
+  const value = raw?.trim();
+  if (!value) return PRODUCTION_URL;
+
+  // Values without a scheme (e.g. "example.co.uk") are treated as https.
+  const hasScheme = /^[a-z][a-z\d+.-]*:\/\//i.test(value);
+  const candidate = hasScheme ? value : `https://${value}`;
+
+  try {
+    const url = new URL(candidate);
+    const validProtocol = url.protocol === "https:" || url.protocol === "http:";
+    const validHost = url.hostname === "localhost" || HOSTNAME_PATTERN.test(url.hostname);
+    if (validProtocol && validHost) return url.origin;
+  } catch {
+    // Fall through to the warning below.
+  }
+
+  console.warn(`[site] Invalid NEXT_PUBLIC_SITE_URL "${value}"; using ${PRODUCTION_URL}`);
+  return PRODUCTION_URL;
+}
+
 export const site = {
   name: "Homebuzz Gardening Services",
   shortName: "Homebuzz",
@@ -13,8 +45,8 @@ export const site = {
   description:
     "Affordable garden clearance, green waste removal and garden maintenance across Belfast. Free written quotes, no upfront payment, and discounts for eligible older and disabled residents.",
 
-  /** Public site URL. Set NEXT_PUBLIC_SITE_URL in production. */
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
+  /** Public site URL. Set NEXT_PUBLIC_SITE_URL in production; falls back to PRODUCTION_URL. */
+  url: resolveSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
 
   location: {
     city: "Belfast",
