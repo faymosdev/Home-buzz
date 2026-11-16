@@ -57,7 +57,7 @@ export function localBusinessJsonLd() {
       addressRegion: site.location.region,
       addressCountry: site.location.country,
     },
-    areaServed: { "@type": "City", name: site.location.city },
+    areaServed: { "@type": "AdministrativeArea", name: site.location.region },
     currenciesAccepted: "GBP",
     ...(site.contact.phone ? { telephone: site.contact.phone } : {}),
     ...(site.contact.email ? { email: site.contact.email } : {}),
@@ -67,7 +67,7 @@ export function localBusinessJsonLd() {
       name: "Garden services",
       itemListElement: availableServices.map((s) => ({
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: s.name, description: s.summary, areaServed: site.location.city },
+        itemOffered: { "@type": "Service", name: s.name, description: s.summary, areaServed: site.location.region },
       })),
     },
   };

@@ -21,7 +21,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Landlord and Letting Agent Garden Clearance in Belfast",
   description:
-    "End-of-tenancy garden clearances and ongoing maintenance for Belfast landlords, letting agents, property managers and housing providers. Fixed prices after assessment and fast turnaround.",
+    "End-of-tenancy garden clearances and ongoing maintenance for landlords, letting agents, property managers and housing providers in Belfast and across Northern Ireland. Fixed prices after assessment and fast turnaround.",
   path: "/business-services",
 });
 
@@ -51,7 +51,7 @@ export default function BusinessServicesPage() {
       <PageHero
         eyebrow="For landlords and property professionals"
         title="A dependable garden partner for the properties you manage"
-        intro="End-of-tenancy clearances and ongoing garden maintenance across Belfast. Fixed prices after assessment, fast turnaround, and one point of contact."
+        intro="End-of-tenancy clearances and ongoing garden maintenance in Belfast and across Northern Ireland. Fixed prices after assessment, fast turnaround, and one point of contact."
         image={images.rentalHomes}
         cta={CTA}
       />

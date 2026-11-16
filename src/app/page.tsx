@@ -13,7 +13,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Garden Clearance Belfast | Homebuzz Gardening Services",
   description:
-    "Affordable garden clearance and green waste removal in Belfast. Free written quotes, no upfront payment, and discounts for eligible older and disabled residents.",
+    "Affordable garden clearance and green waste removal in Belfast and across Northern Ireland. Free written quotes, no upfront payment, and discounts for eligible older and disabled residents.",
   path: "/",
   absoluteTitle: true,
 });

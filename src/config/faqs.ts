@@ -22,7 +22,7 @@ export const faqs: Faq[] = [
     id: "areas",
     question: "What areas do you cover?",
     answer:
-      "We cover Belfast and BT postcodes. If you're just outside the city, send us your postcode and we'll tell you honestly whether we can reach you.",
+      "We cover anywhere in Northern Ireland, including Belfast and every BT postcode. Just give us the property postcode when you request a quote.",
     category: "the-service",
     home: true,
   },

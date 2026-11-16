@@ -23,7 +23,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Affordable Garden Help for Homes in Belfast",
   description:
-    "Affordable garden clearance and maintenance for Belfast homeowners and tenants. Flexible job sizes, no upfront payment, and discounts for eligible older and disabled residents.",
+    "Affordable garden clearance and maintenance for homeowners and tenants in Belfast and across Northern Ireland. Flexible job sizes, no upfront payment, and discounts for eligible older and disabled residents.",
   path: "/residential",
 });
 

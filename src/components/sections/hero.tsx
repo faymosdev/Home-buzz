@@ -21,7 +21,7 @@ export function Hero() {
             <span className="block text-green">Your space, renewed.</span>
           </h1>
           <p className="mt-7 max-w-[34rem] text-lead text-muted-strong">
-            Affordable garden clearance and green waste removal across Belfast. Send us a few photos, get a free written
+            Affordable garden clearance and green waste removal in Belfast and across Northern Ireland. Send us a few photos, get a free written
             quote, and pay nothing until the work is done.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">

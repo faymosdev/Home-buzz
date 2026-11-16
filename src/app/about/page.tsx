@@ -16,7 +16,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "About Homebuzz Gardening Services, Belfast",
   description:
-    "Homebuzz is a Belfast garden clearance business founded by Fortune, built around fair prices, responsible waste handling and helping older and disabled residents.",
+    "Homebuzz is a Belfast garden clearance business serving all of Northern Ireland, founded by Fortune, built around fair prices, responsible waste handling and helping older and disabled residents.",
   path: "/about",
 });
 
@@ -41,7 +41,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Homebuzz"
         title="Making garden upkeep easier for everyone in Belfast"
-        intro="Homebuzz Gardening Services is a new Belfast business offering affordable garden clearance, green waste removal and maintenance. We launch in March 2027."
+        intro="Homebuzz Gardening Services is a new Belfast business offering affordable garden clearance, green waste removal and maintenance across Northern Ireland. We launch in March 2027."
         image={images.gardenerAtWork}
       />
 

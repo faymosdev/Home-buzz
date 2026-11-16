@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Get a Free Garden Clearance Quote in Belfast",
   description:
-    "Request a free written quote for garden clearance, green waste removal or maintenance in Belfast. Upload photos of your garden. No upfront payment, no obligation.",
+    "Request a free written quote for garden clearance, green waste removal or maintenance in Belfast and across Northern Ireland. Upload photos of your garden. No upfront payment, no obligation.",
   path: "/get-a-quote",
 });
 
