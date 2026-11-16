@@ -25,7 +25,7 @@ Browser ──► Next.js App Router (static pages, server actions)
   limits and never exposes the service role key.
 - **Honest failure modes.** If Supabase isn't configured, the forms say so and show contact details.
   If email isn't configured, enquiries are still saved and the skip is logged.
-- **Content lives in `src/config/`.** Business details, services, pricing, FAQs, audiences, reviews,
+- **Content lives in `src/config/`.** Business details, services, FAQs, audiences, reviews,
   navigation and images. Pages read from there; nothing is duplicated across pages.
 
 ### Folder map
@@ -35,7 +35,7 @@ Browser ──► Next.js App Router (static pages, server actions)
 | `src/app/` | Routes, layouts, metadata, sitemap, robots, server actions |
 | `src/components/ui/` | Primitives: button, field inputs, accordion, placeholder |
 | `src/components/layout/` | Header, mobile nav, footer, container/section |
-| `src/components/sections/` | Page sections: hero, services, before/after, pricing, FAQ, CTA… |
+| `src/components/sections/` | Page sections: hero, services, before/after, FAQ, CTA… |
 | `src/components/forms/` | Quote form (multi-step) and contact form |
 | `src/config/` | All editable business content |
 | `src/lib/` | Utilities, SEO helpers, validation schemas, Supabase and email clients |
@@ -79,6 +79,6 @@ Nothing below is built yet. Each phase gets its own migration and its own slice 
 - `/admin` is already disallowed in `robots.ts`.
 - Admin screens call the same functions in `src/services/`. Photos are shown via short-lived signed URLs
   generated server-side; the bucket stays private.
-- Managing pricing, services and reviews from the dashboard means moving `src/config/pricing.ts`,
-  `services.ts` and `testimonials.ts` into tables. Keep the config files as the seed data.
+- Managing services and reviews from the dashboard means moving `src/config/services.ts` and
+  `testimonials.ts` into tables. Keep the config files as the seed data.
 - Grants and policy changes go in their own migrations, separate from table changes.

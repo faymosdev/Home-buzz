@@ -4,7 +4,6 @@ import { ArrowRightOutlineIcon, CheckCircleBoldIcon } from "@solar-icons/react";
 import { Container } from "@/components/layout/container";
 import { CtaBand } from "@/components/sections/cta-band";
 import { PageHero } from "@/components/sections/page-hero";
-import { PricingPreview } from "@/components/sections/pricing-preview";
 import { ServiceIcon } from "@/components/sections/service-icon";
 import { buttonVariants } from "@/components/ui/button";
 import { images } from "@/config/images";
@@ -109,7 +108,6 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      <PricingPreview tone="mint" />
       <CtaBand />
     </>
   );

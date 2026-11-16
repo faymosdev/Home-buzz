@@ -19,7 +19,7 @@ export default function TermsPage() {
           body: (
             <>
               <p>
-                Prices shown on this website are a guide only. A quote request sent through this website is not a booking and does not
+                We don&apos;t publish prices on this website. Every job is priced individually in a free written quote. A quote request sent through this website is not a booking and does not
                 commit you to anything. We provide a written quote before any work begins.
               </p>
               <Placeholder block>How long quotes remain valid, and what happens if the job turns out different from what was described, to be added.</Placeholder>

@@ -77,15 +77,14 @@ request-size limits.
 If sending fails, the enquiry is still saved and the error is logged. Check Supabase if an email seems
 missing.
 
-## 5. Update content, services and pricing
+## 5. Update content and services
 
 Everything editable lives in **`src/config/`**. Change it there and every page updates.
 
 | File | What it controls |
 |---|---|
 | `site.ts` | Phone, email, opening hours, social links, launch banner, waste carrier registration, insurance, discount wording |
-| `services.ts` | The 7 services and the "coming soon" window cleaning card (descriptions, suitable for, benefits, image) |
-| `pricing.ts` | Indicative prices (whole pounds, GBP) and the pricing notes |
+| `services.ts` | The 7 services (descriptions, suitable for, benefits, image) |
 | `faqs.ts` | All FAQ questions, categories, and which appear on the homepage |
 | `audiences.ts` | "Who we help" cards |
 | `testimonials.ts` | Customer reviews. **Genuine reviews only.** While empty, a "reviews coming soon" state shows |

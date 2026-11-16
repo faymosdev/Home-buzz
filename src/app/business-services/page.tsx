@@ -13,7 +13,6 @@ import { Container, Section, SectionHeading } from "@/components/layout/containe
 import { CtaBand } from "@/components/sections/cta-band";
 import { FaqSection } from "@/components/sections/faq-list";
 import { PageHero } from "@/components/sections/page-hero";
-import { PricingPreview } from "@/components/sections/pricing-preview";
 import { buttonVariants } from "@/components/ui/button";
 import { faqs } from "@/config/faqs";
 import { images } from "@/config/images";
@@ -100,7 +99,6 @@ export default function BusinessServicesPage() {
         </Container>
       </Section>
 
-      <PricingPreview audience="business" tone="white" title="Business pricing, as a guide" intro="Every property is different. After assessment you get one fixed price in writing, before any work begins." />
       <FaqSection items={businessFaqs} title="Questions from property professionals" tone="paper" />
       <CtaBand title="Got properties that need attention?" body="Tell us about the property, the deadline and the access. We'll come back with a fixed price after assessment." ctaLabel={CTA.label} ctaHref={CTA.href} />
     </>

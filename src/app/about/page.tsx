@@ -21,7 +21,7 @@ export const metadata = buildMetadata({
 });
 
 const values = [
-  { title: "Fair", body: "Honest guide prices, a written quote, and nothing to pay until the work is done." },
+  { title: "Fair", body: "A clear written quote, and nothing to pay until the work is done." },
   { title: "Reliable", body: "We turn up when we say we will and do what we quoted for." },
   { title: "Respectful", body: "Your home, your garden, your pace. We explain and we listen." },
   { title: "Responsible", body: "Waste is handled properly. No shortcuts, and no fly-tipping." },
@@ -55,7 +55,7 @@ export default function AboutPage() {
                 lets, and older or disabled residents who can no longer do the heavy work themselves.
               </p>
               <p>
-                Homebuzz exists to make that easy to fix, with clear prices, a written quote, nothing to pay up front, and
+                Homebuzz exists to make that easy to fix, with a clear written quote, nothing to pay up front, and
                 waste that&apos;s taken away and dealt with properly.
               </p>
             </div>
