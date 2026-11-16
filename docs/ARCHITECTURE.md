@@ -36,7 +36,7 @@ Browser ──► Next.js App Router (static pages, server actions)
 | `src/components/ui/` | Primitives: button, field inputs, accordion, placeholder |
 | `src/components/layout/` | Header, mobile nav, footer, container/section |
 | `src/components/sections/` | Page sections: hero, services, before/after, FAQ, CTA… |
-| `src/components/forms/` | Quote form (multi-step) and contact form |
+| `src/components/forms/` | Quote form (single page) and contact form |
 | `src/config/` | All editable business content |
 | `src/lib/` | Utilities, SEO helpers, validation schemas, Supabase and email clients |
 | `src/services/` | Backend service layer, reused by actions now and admin/API later |

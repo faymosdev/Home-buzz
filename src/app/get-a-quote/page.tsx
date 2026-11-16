@@ -24,7 +24,7 @@ export default function GetAQuotePage() {
             Tell us about your garden
           </h1>
           <p className="mt-5 text-lead text-muted-strong">
-            Four short steps. We&apos;ll review your details and send you a free written quote. This doesn&apos;t book anything.
+            One short form. We&apos;ll review your details and send you a free written quote. This doesn&apos;t book anything.
           </p>
           <ul className="mt-8 space-y-3">
             {promises.map((p) => (
