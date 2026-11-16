@@ -16,12 +16,12 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "About Homebuzz Gardening Services, Belfast",
   description:
-    "Homebuzz is a Belfast garden clearance business founded by Fortune, built around fair prices, responsible waste handling and helping older and disabled residents.",
+    "Homebuzz is a Belfast garden clearance business serving all of Northern Ireland, founded by Fortune, built around fair prices, responsible waste handling and helping older and disabled residents.",
   path: "/about",
 });
 
 const values = [
-  { title: "Fair", body: "Honest guide prices, a written quote, and nothing to pay until the work is done." },
+  { title: "Fair", body: "A clear written quote, and nothing to pay until the work is done." },
   { title: "Reliable", body: "We turn up when we say we will and do what we quoted for." },
   { title: "Respectful", body: "Your home, your garden, your pace. We explain and we listen." },
   { title: "Responsible", body: "Waste is handled properly. No shortcuts, and no fly-tipping." },
@@ -41,7 +41,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Homebuzz"
         title="Making garden upkeep easier for everyone in Belfast"
-        intro="Homebuzz Gardening Services is a new Belfast business offering affordable garden clearance, green waste removal and maintenance. We launch in March 2027."
+        intro="Homebuzz Gardening Services is a new Belfast business offering affordable garden clearance, green waste removal and maintenance across Northern Ireland. We launch in March 2027."
         image={images.gardenerAtWork}
       />
 
@@ -55,7 +55,7 @@ export default function AboutPage() {
                 lets, and older or disabled residents who can no longer do the heavy work themselves.
               </p>
               <p>
-                Homebuzz exists to make that easy to fix, with clear prices, a written quote, nothing to pay up front, and
+                Homebuzz exists to make that easy to fix, with a clear written quote, nothing to pay up front, and
                 waste that&apos;s taken away and dealt with properly.
               </p>
             </div>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { pricing } from "@/config/pricing";
 import { availableServices } from "@/config/services";
 import { site } from "@/config/site";
 import { absoluteUrl } from "./utils";
@@ -41,7 +40,6 @@ export function buildMetadata({ title, description, path, noIndex, absoluteTitle
  * set in src/config/site.ts.
  */
 export function localBusinessJsonLd() {
-  const prices = pricing.map((p) => p.from);
   const sameAs = Object.values(site.social).filter(Boolean);
   return {
     "@context": "https://schema.org",
@@ -59,8 +57,7 @@ export function localBusinessJsonLd() {
       addressRegion: site.location.region,
       addressCountry: site.location.country,
     },
-    areaServed: { "@type": "City", name: site.location.city },
-    priceRange: `£${Math.min(...prices)}–£350+`,
+    areaServed: { "@type": "AdministrativeArea", name: site.location.region },
     currenciesAccepted: "GBP",
     ...(site.contact.phone ? { telephone: site.contact.phone } : {}),
     ...(site.contact.email ? { email: site.contact.email } : {}),
@@ -70,7 +67,7 @@ export function localBusinessJsonLd() {
       name: "Garden services",
       itemListElement: availableServices.map((s) => ({
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: s.name, description: s.summary, areaServed: site.location.city },
+        itemOffered: { "@type": "Service", name: s.name, description: s.summary, areaServed: site.location.region },
       })),
     },
   };

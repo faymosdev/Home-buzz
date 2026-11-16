@@ -4,7 +4,6 @@ import { ArrowRightOutlineIcon, CheckCircleBoldIcon } from "@solar-icons/react";
 import { Container } from "@/components/layout/container";
 import { CtaBand } from "@/components/sections/cta-band";
 import { PageHero } from "@/components/sections/page-hero";
-import { PricingPreview } from "@/components/sections/pricing-preview";
 import { ServiceIcon } from "@/components/sections/service-icon";
 import { buttonVariants } from "@/components/ui/button";
 import { images } from "@/config/images";
@@ -15,7 +14,7 @@ import { cn } from "@/lib/utils";
 export const metadata = buildMetadata({
   title: "Garden Clearance, Hedge and Green Waste Services in Belfast",
   description:
-    "Garden clearance, overgrown garden clearance, hedge and scrub clearance, green waste removal and regular garden maintenance in Belfast, for homes, landlords and property managers.",
+    "Garden clearance, overgrown garden clearance, hedge and scrub clearance, green waste removal and regular garden maintenance in Belfast and across Northern Ireland, for homes, landlords and property managers.",
   path: "/services",
 });
 
@@ -109,7 +108,6 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      <PricingPreview tone="mint" />
       <CtaBand />
     </>
   );

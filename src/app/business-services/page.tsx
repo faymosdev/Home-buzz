@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   Buildings2OutlineIcon,
@@ -14,7 +13,6 @@ import { Container, Section, SectionHeading } from "@/components/layout/containe
 import { CtaBand } from "@/components/sections/cta-band";
 import { FaqSection } from "@/components/sections/faq-list";
 import { PageHero } from "@/components/sections/page-hero";
-import { PricingPreview } from "@/components/sections/pricing-preview";
 import { buttonVariants } from "@/components/ui/button";
 import { faqs } from "@/config/faqs";
 import { images } from "@/config/images";
@@ -23,7 +21,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Landlord and Letting Agent Garden Clearance in Belfast",
   description:
-    "End-of-tenancy garden clearances and ongoing maintenance for Belfast landlords, letting agents, property managers and housing providers. Fixed prices after assessment and fast turnaround.",
+    "End-of-tenancy garden clearances and ongoing maintenance for landlords, letting agents, property managers and housing providers in Belfast and across Northern Ireland. Fixed prices after assessment and fast turnaround.",
   path: "/business-services",
 });
 
@@ -53,7 +51,7 @@ export default function BusinessServicesPage() {
       <PageHero
         eyebrow="For landlords and property professionals"
         title="A dependable garden partner for the properties you manage"
-        intro="End-of-tenancy clearances and ongoing garden maintenance across Belfast. Fixed prices after assessment, fast turnaround, and one point of contact."
+        intro="End-of-tenancy clearances and ongoing garden maintenance in Belfast and across Northern Ireland. Fixed prices after assessment, fast turnaround, and one point of contact."
         image={images.rentalHomes}
         cta={CTA}
       />
@@ -101,39 +99,6 @@ export default function BusinessServicesPage() {
         </Container>
       </Section>
 
-      <Section tone="paper" labelledBy="roadmap-title">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-            <div>
-              <SectionHeading
-                id="roadmap-title"
-                eyebrow="Coming later"
-                title="Business accounts are on the way"
-                intro="At launch, business work is arranged directly with us: you ask for a quote, we confirm a fixed price, and we invoice once the work is done. We're planning online business accounts so you can:"
-              />
-              <ul className="mt-6 space-y-3 text-ink">
-                {[
-                  "Manage several properties in one place",
-                  "Book repeat clearances and maintenance online",
-                  "See job history and before-and-after photos",
-                  "Get invoices and business pricing in your account",
-                ].map((x) => (
-                  <li key={x} className="flex items-start gap-3">
-                    <span className="mt-2.5 size-2 shrink-0 rounded-full bg-green" aria-hidden />
-                    {x}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-sm text-muted-strong">These features aren&apos;t available yet. We&apos;ll let our business customers know when they are.</p>
-            </div>
-            <div className="leaf-lg relative aspect-[4/3] overflow-hidden bg-mint">
-              <Image src={images.propertyManaged.src} alt={images.propertyManaged.alt} fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      <PricingPreview audience="business" tone="white" title="Business pricing, as a guide" intro="Every property is different. After assessment you get one fixed price in writing, before any work begins." />
       <FaqSection items={businessFaqs} title="Questions from property professionals" tone="paper" />
       <CtaBand title="Got properties that need attention?" body="Tell us about the property, the deadline and the access. We'll come back with a fixed price after assessment." ctaLabel={CTA.label} ctaHref={CTA.href} />
     </>

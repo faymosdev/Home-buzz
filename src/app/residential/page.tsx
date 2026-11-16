@@ -14,7 +14,6 @@ import { CtaBand } from "@/components/sections/cta-band";
 import { FaqSection } from "@/components/sections/faq-list";
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { PageHero } from "@/components/sections/page-hero";
-import { PricingPreview } from "@/components/sections/pricing-preview";
 import { buttonVariants } from "@/components/ui/button";
 import { faqs } from "@/config/faqs";
 import { images } from "@/config/images";
@@ -24,12 +23,12 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Affordable Garden Help for Homes in Belfast",
   description:
-    "Affordable garden clearance and maintenance for Belfast homeowners and tenants. Flexible job sizes, no upfront payment, and discounts for eligible older and disabled residents.",
+    "Affordable garden clearance and maintenance for homeowners and tenants in Belfast and across Northern Ireland. Flexible job sizes, no upfront payment, and discounts for eligible older and disabled residents.",
   path: "/residential",
 });
 
 const points = [
-  { icon: WalletOutlineIcon, title: "Affordable, and clear about it", body: "Guide prices on our website and a fixed written quote before we start." },
+  { icon: WalletOutlineIcon, title: "Affordable, and clear about it", body: "A fixed written quote before we start, with no surprises on the day." },
   { icon: RulerOutlineIcon, title: "Any size of job", body: "One overgrown corner or the whole garden. Small jobs are welcome." },
   { icon: HomeSmileOutlineIcon, title: "Nothing to pay up front", body: "No deposits and no online payments. You pay when the work is done." },
   { icon: ChatRoundDotsOutlineIcon, title: "A simple way to ask", body: "Fill in a short form, call us, or ask a family member to do it for you." },
@@ -103,7 +102,6 @@ export default function ResidentialPage() {
       </Section>
 
       <HowItWorks tone="paper" />
-      <PricingPreview audience="residential" tone="white" title="What garden help usually costs" />
       <FaqSection items={residentialFaqs} title="Questions from homeowners" tone="paper" />
       <CtaBand />
     </>

@@ -70,7 +70,7 @@ export function Footer() {
             <li className="flex items-start gap-3">
               <MapPointOutlineIcon className="mt-1 size-5 shrink-0 text-green-300" aria-hidden />
               <span>
-                Serving {site.location.serviceArea}, {site.location.region}
+                Serving {site.location.serviceArea}
               </span>
             </li>
             <li className="pt-2">

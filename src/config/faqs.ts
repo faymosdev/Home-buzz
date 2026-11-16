@@ -1,7 +1,7 @@
 export type FaqCategory = "quotes-pricing" | "the-service" | "waste" | "businesses" | "accessibility";
 
 export const faqCategories: { id: FaqCategory; label: string }[] = [
-  { id: "quotes-pricing", label: "Quotes and pricing" },
+  { id: "quotes-pricing", label: "Quotes and payment" },
   { id: "the-service", label: "The service" },
   { id: "waste", label: "Garden waste" },
   { id: "businesses", label: "Landlords and businesses" },
@@ -22,16 +22,8 @@ export const faqs: Faq[] = [
     id: "areas",
     question: "What areas do you cover?",
     answer:
-      "We cover Belfast and BT postcodes. If you're just outside the city, send us your postcode and we'll tell you honestly whether we can reach you.",
+      "We cover anywhere in Northern Ireland, including Belfast and every BT postcode. Just give us the property postcode when you request a quote.",
     category: "the-service",
-    home: true,
-  },
-  {
-    id: "cost",
-    question: "How much does garden clearance cost?",
-    answer:
-      "As a guide, a small garden tidy-up is usually £60–£120 and a full garden clearance £150–£350 or more. Every garden is different, so your price depends on size, condition, access and how much waste there is. You'll always get a free written quote before any work starts.",
-    category: "quotes-pricing",
     home: true,
   },
   {
@@ -86,7 +78,7 @@ export const faqs: Faq[] = [
     id: "maintenance",
     question: "Can I arrange regular maintenance?",
     answer:
-      "Yes. Once your garden is cleared, we can visit fortnightly, monthly or seasonally to keep it that way. Regular visits are usually around £45 each, confirmed in your quote.",
+      "Yes. Once your garden is cleared, we can visit fortnightly, monthly or seasonally to keep it that way. The cost of each visit is confirmed in your written quote.",
     category: "the-service",
     home: true,
   },
@@ -136,7 +128,7 @@ export const faqs: Faq[] = [
     id: "multiple-properties",
     question: "Can you look after several properties for us?",
     answer:
-      "Yes. We can agree a schedule across multiple addresses with one point of contact. Business accounts with online repeat bookings are planned for the future.",
+      "Yes. We can agree a schedule across multiple addresses with one point of contact.",
     category: "businesses",
   },
   {

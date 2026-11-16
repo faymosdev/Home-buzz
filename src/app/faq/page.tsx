@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Garden Clearance FAQs",
   description:
-    "Answers about garden clearance in Belfast: prices, free quotes, paying after the job, photo uploads, garden waste, landlord services and discounts for older and disabled residents.",
+    "Answers about garden clearance in Belfast and across Northern Ireland: free quotes, paying after the job, photo uploads, garden waste, landlord services and discounts for older and disabled residents.",
   path: "/faq",
 });
 
@@ -21,7 +21,7 @@ export default function FaqPage() {
               Questions and answers
             </h1>
             <p className="mt-5 text-lead text-muted-strong">
-              Straight answers about prices, quotes, waste and how we work. Can&apos;t find what you need? Just ask.
+              Straight answers about quotes, payment, waste and how we work. Can&apos;t find what you need? Just ask.
             </p>
           </div>
           <div className="mt-12 max-w-4xl">

@@ -41,9 +41,9 @@ export const site = {
   name: "Homebuzz Gardening Services",
   shortName: "Homebuzz",
   founder: "Fortune",
-  tagline: "Garden clearance and green waste removal in Belfast",
+  tagline: "Garden clearance and green waste removal in Belfast and across Northern Ireland",
   description:
-    "Affordable garden clearance, green waste removal and garden maintenance across Belfast. Free written quotes, no upfront payment, and discounts for eligible older and disabled residents.",
+    "Affordable garden clearance, green waste removal and garden maintenance in Belfast and across Northern Ireland. Free written quotes, no upfront payment, and discounts for eligible older and disabled residents.",
 
   /** Public site URL. Set NEXT_PUBLIC_SITE_URL in production; falls back to PRODUCTION_URL. */
   url: resolveSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
@@ -52,10 +52,10 @@ export const site = {
     city: "Belfast",
     region: "Northern Ireland",
     country: "GB",
-    serviceArea: "Belfast and surrounding areas",
+    serviceArea: "Belfast and all of Northern Ireland",
     /** Short, honest description of coverage. Update once confirmed. */
     serviceAreaDetail:
-      "We cover Belfast (BT postcodes). If you're just outside the city, ask us — we'll tell you honestly whether we can reach you.",
+      "We cover anywhere in Northern Ireland, including Belfast and every BT postcode.",
   },
 
   contact: {
