@@ -11,8 +11,8 @@ import { Container, Section, SectionHeading } from "@/components/layout/containe
 const reasons = [
   {
     icon: TagPriceOutlineIcon,
-    title: "Affordable, transparent pricing",
-    body: "Guide prices published on this site, and a fixed written price before we start. No surprises on the day.",
+    title: "Affordable, transparent quotes",
+    body: "Every job is priced individually, with a fixed written price before we start. No surprises on the day.",
   },
   {
     icon: DocumentTextOutlineIcon,

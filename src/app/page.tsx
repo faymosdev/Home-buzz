@@ -3,7 +3,6 @@ import { CtaBand } from "@/components/sections/cta-band";
 import { FaqSection } from "@/components/sections/faq-list";
 import { Hero } from "@/components/sections/hero";
 import { HowItWorks } from "@/components/sections/how-it-works";
-import { PricingPreview } from "@/components/sections/pricing-preview";
 import { Testimonials } from "@/components/sections/testimonials";
 import { WhatWeDo } from "@/components/sections/what-we-do";
 import { WhoWeHelp } from "@/components/sections/who-we-help";
@@ -28,7 +27,6 @@ export default function HomePage() {
       <WhyChoose />
       <WhoWeHelp />
       <HowItWorks />
-      <PricingPreview />
       <Testimonials />
       <FaqSection items={homeFaqs} />
       <CtaBand />
