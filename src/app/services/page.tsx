@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 export const metadata = buildMetadata({
   title: "Garden Clearance, Hedge and Green Waste Services in Belfast",
   description:
-    "Garden clearance, overgrown garden clearance, hedge and scrub clearance, green waste removal and regular garden maintenance in Belfast, for homes, landlords and property managers.",
+    "Garden clearance, overgrown garden clearance, hedge and scrub clearance, green waste removal and regular garden maintenance in Belfast and across Northern Ireland, for homes, landlords and property managers.",
   path: "/services",
 });
 

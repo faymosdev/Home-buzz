@@ -19,7 +19,7 @@ export function WhatWeDo() {
             id="what-we-do-title"
             eyebrow="What we do"
             title="Garden help for every size of job"
-            intro="Homebuzz clears, tidies and maintains gardens across Belfast. Whether it's one afternoon or a full reset, the waste leaves with us."
+            intro="Homebuzz clears, tidies and maintains gardens in Belfast and across Northern Ireland. Whether it's one afternoon or a full reset, the waste leaves with us."
           />
           <Link
             href="/services"

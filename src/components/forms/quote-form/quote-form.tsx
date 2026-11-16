@@ -233,7 +233,7 @@ export function QuoteForm() {
               </div>
               <FieldError id="customerType-error" message={errors.customerType?.message} />
             </fieldset>
-            <Field id="postcode" label="Property postcode" hint="We cover Belfast (BT postcodes)." error={errors.postcode?.message}>
+            <Field id="postcode" label="Property postcode" hint="We cover anywhere in Northern Ireland (BT postcodes)." error={errors.postcode?.message}>
               <Input id="postcode" autoComplete="postal-code" className="uppercase" aria-invalid={!!errors.postcode} aria-describedby={describedBy("postcode", { hint: true, error: true })} {...register("postcode")} />
             </Field>
             <Field id="address" label="Property address" error={errors.address?.message} className="sm:col-span-2">

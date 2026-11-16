@@ -9,7 +9,7 @@ import { telHref } from "@/lib/utils";
 
 export const metadata = buildMetadata({
   title: "Contact Homebuzz Gardening Services, Belfast",
-  description: "Get in touch with Homebuzz Gardening Services about garden clearance, green waste removal or maintenance in Belfast.",
+  description: "Get in touch with Homebuzz Gardening Services about garden clearance, green waste removal or maintenance in Belfast and across Northern Ireland.",
   path: "/contact",
 });
 
