@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   Buildings2OutlineIcon,
@@ -97,38 +96,6 @@ export default function BusinessServicesPage() {
                 </li>
               ))}
             </ul>
-          </div>
-        </Container>
-      </Section>
-
-      <Section tone="paper" labelledBy="roadmap-title">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-            <div>
-              <SectionHeading
-                id="roadmap-title"
-                eyebrow="Coming later"
-                title="Business accounts are on the way"
-                intro="At launch, business work is arranged directly with us: you ask for a quote, we confirm a fixed price, and we invoice once the work is done. We're planning online business accounts so you can:"
-              />
-              <ul className="mt-6 space-y-3 text-ink">
-                {[
-                  "Manage several properties in one place",
-                  "Book repeat clearances and maintenance online",
-                  "See job history and before-and-after photos",
-                  "Get invoices and business pricing in your account",
-                ].map((x) => (
-                  <li key={x} className="flex items-start gap-3">
-                    <span className="mt-2.5 size-2 shrink-0 rounded-full bg-green" aria-hidden />
-                    {x}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-sm text-muted-strong">These features aren&apos;t available yet. We&apos;ll let our business customers know when they are.</p>
-            </div>
-            <div className="leaf-lg relative aspect-[4/3] overflow-hidden bg-mint">
-              <Image src={images.propertyManaged.src} alt={images.propertyManaged.alt} fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
-            </div>
           </div>
         </Container>
       </Section>

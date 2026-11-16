@@ -136,7 +136,7 @@ export const faqs: Faq[] = [
     id: "multiple-properties",
     question: "Can you look after several properties for us?",
     answer:
-      "Yes. We can agree a schedule across multiple addresses with one point of contact. Business accounts with online repeat bookings are planned for the future.",
+      "Yes. We can agree a schedule across multiple addresses with one point of contact.",
     category: "businesses",
   },
   {
