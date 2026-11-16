@@ -109,18 +109,6 @@ export const services: Service[] = [
     icon: "buildings",
     status: "available",
   },
-  {
-    id: "window-cleaning",
-    name: "Window cleaning",
-    summary: "A future service we're planning to add. Not available yet.",
-    description:
-      "We're planning to add window cleaning in the future. It isn't available yet, so we can't take bookings for it. If you'd like to hear when it launches, mention it when you get in touch.",
-    suitableFor: ["Existing Homebuzz customers"],
-    benefits: ["Planned for a later date"],
-    image: images.houseLawn,
-    icon: "sun",
-    status: "coming-soon",
-  },
 ];
 
 export const availableServices = services.filter((s) => s.status === "available");
