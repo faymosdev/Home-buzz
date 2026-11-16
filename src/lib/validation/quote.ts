@@ -76,8 +76,12 @@ export const serviceStepSchema = z.object({
 
 export const consentSchema = z.object({
   consent: z.literal(true, { error: "Please confirm you agree so we can contact you about your quote" }),
-  /** Honeypot: real people never see or fill this field. */
-  website: z.string().max(0).optional().default(""),
+  /**
+   * Honeypot: real people never see or fill this field. Any value is accepted here so the
+   * server action can spot it and return a fake success, rather than a validation error
+   * that names the field and tells bots it's a trap.
+   */
+  website: z.string().max(500).optional().default(""),
 });
 
 export const quoteRequestSchema = customerStepSchema.extend(serviceStepSchema.shape).extend(consentSchema.shape);

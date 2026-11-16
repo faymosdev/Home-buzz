@@ -20,7 +20,12 @@ export const contactSchema = z.object({
   topic: z.enum(["general", "quote", "business", "other"], { error: "Choose a topic" }),
   message: z.string().trim().min(10, "Please write a short message (at least 10 characters)").max(3000),
   consent: z.literal(true, { error: "Please confirm you agree so we can reply to you" }),
-  website: z.string().max(0).optional().default(""),
+  /**
+   * Honeypot: real people never see or fill this field. Any value is accepted here so the
+   * server action can spot it and return a fake success, rather than a validation error
+   * that names the field and tells bots it's a trap.
+   */
+  website: z.string().max(500).optional().default(""),
 });
 
 export type ContactInput = z.input<typeof contactSchema>;
