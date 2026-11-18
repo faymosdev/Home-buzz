@@ -35,6 +35,10 @@ const safeName = (name: string) =>
     .replace(/^-+|-+$/g, "")
     .slice(-80) || "photo";
 
+/** "2026-11-20" -> "20 November 2026". Parsed as UTC midday so the day never shifts by time zone. */
+const formatDate = (isoDate: string) =>
+  new Date(`${isoDate}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+
 /** Issues short-lived signed upload URLs so photos go straight from the browser to private storage. */
 export async function createPhotoUploadTickets(files: { name: string }[]) {
   const supabase = getSupabaseAdmin();
@@ -108,7 +112,7 @@ export async function createQuoteRequest(input: QuoteRequest, photos: { uploadId
       `Service: ${labelFor(serviceOptions, input.serviceType)}`,
       `Garden size: ${labelFor(gardenSizes, input.gardenSize)}`,
       `Condition: ${labelFor(gardenConditions, input.gardenCondition)}`,
-      `Preferred date: ${input.preferredDate || "No preference"}`,
+      `Preferred date: ${input.preferredDate ? formatDate(input.preferredDate) : "No preference"}`,
       ``,
       `Description:`,
       input.gardenDescription,
