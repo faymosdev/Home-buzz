@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { availableServices } from "@/config/services";
 import { site } from "@/config/site";
-import { absoluteUrl } from "./utils";
+import { absoluteUrl, intlPhone } from "./utils";
 
 type PageMeta = {
   title: string;
@@ -59,7 +59,7 @@ export function localBusinessJsonLd() {
     },
     areaServed: { "@type": "AdministrativeArea", name: site.location.region },
     currenciesAccepted: "GBP",
-    ...(site.contact.phone ? { telephone: site.contact.phone } : {}),
+    ...(site.contact.phone ? { telephone: intlPhone(site.contact.phone) } : {}),
     ...(site.contact.email ? { email: site.contact.email } : {}),
     ...(sameAs.length ? { sameAs } : {}),
     hasOfferCatalog: {

@@ -1,11 +1,11 @@
 import { Suspense } from "react";
-import { ClockCircleOutlineIcon, LetterOutlineIcon, MapPointOutlineIcon, PhoneOutlineIcon, UsersGroupRoundedOutlineIcon } from "@solar-icons/react";
+import { ChatRoundDotsOutlineIcon, ClockCircleOutlineIcon, LetterOutlineIcon, MapPointOutlineIcon, PhoneOutlineIcon, UsersGroupRoundedOutlineIcon } from "@solar-icons/react";
 import { ContactForm } from "@/components/forms/contact-form";
 import { Container } from "@/components/layout/container";
 import { Placeholder } from "@/components/ui/placeholder";
 import { site } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
-import { telHref } from "@/lib/utils";
+import { telHref, whatsappHref } from "@/lib/utils";
 
 export const metadata = buildMetadata({
   title: "Contact Homebuzz Gardening Services, Belfast",
@@ -27,6 +27,19 @@ export default function ContactPage() {
         <Placeholder>Phone number to be added</Placeholder>
       ),
     },
+    ...(site.contact.whatsapp
+      ? [
+          {
+            icon: ChatRoundDotsOutlineIcon,
+            label: "WhatsApp",
+            value: (
+              <a href={whatsappHref(site.contact.whatsapp)} target="_blank" rel="noopener noreferrer" className="font-semibold text-navy underline underline-offset-4">
+                {site.contact.whatsapp}
+              </a>
+            ),
+          },
+        ]
+      : []),
     {
       icon: LetterOutlineIcon,
       label: "Email",

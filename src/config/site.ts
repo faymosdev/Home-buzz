@@ -59,12 +59,13 @@ export const site = {
   },
 
   contact: {
-    /** e.g. "028 9000 0000" — leave null until the number is live. */
-    phone: null as string | null,
-    /** e.g. "hello@yourdomain.co.uk" — leave null until the inbox is live. */
-    email: null as string | null,
+    /** Phone calls. UK format, e.g. "028 9000 0000". Null hides it. */
+    phone: "07440 063415" as string | null,
+    /** WhatsApp messages. UK format; linked via wa.me. Null hides it. */
+    whatsapp: "07751 573821" as string | null,
+    email: "info@homebuzzgroups.co.uk" as string | null,
     /** e.g. "Mon–Fri 8am–6pm, Sat 9am–1pm" */
-    openingHours: null as string | null,
+    openingHours: "Open 24/7" as string | null,
   },
 
   social: {
