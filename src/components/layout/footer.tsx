@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { LetterOutlineIcon, MapPointOutlineIcon, PhoneOutlineIcon } from "@solar-icons/react";
+import { ChatRoundDotsOutlineIcon, LetterOutlineIcon, MapPointOutlineIcon, PhoneOutlineIcon } from "@solar-icons/react";
 import { Logo } from "@/components/brand/logo";
 import { buttonVariants } from "@/components/ui/button";
 import { Placeholder } from "@/components/ui/placeholder";
 import { legalNav, mainNav, primaryCta } from "@/config/navigation";
 import { availableServices } from "@/config/services";
 import { site } from "@/config/site";
-import { telHref } from "@/lib/utils";
+import { telHref, whatsappHref } from "@/lib/utils";
 import { Container } from "./container";
 
 const socialLabels: Record<keyof typeof site.social, string> = {
@@ -57,6 +57,14 @@ export function Footer() {
                 <Placeholder>Phone number to be added</Placeholder>
               )}
             </li>
+            {site.contact.whatsapp && (
+              <li className="flex items-start gap-3">
+                <ChatRoundDotsOutlineIcon className="mt-1 size-5 shrink-0 text-green-300" aria-hidden />
+                <a className="hover:text-white" href={whatsappHref(site.contact.whatsapp)} target="_blank" rel="noopener noreferrer">
+                  WhatsApp {site.contact.whatsapp}
+                </a>
+              </li>
+            )}
             <li className="flex items-start gap-3">
               <LetterOutlineIcon className="mt-1 size-5 shrink-0 text-green-300" aria-hidden />
               {site.contact.email ? (
