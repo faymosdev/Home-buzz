@@ -9,7 +9,7 @@ import { Logo } from "@/components/brand/logo";
 import { buttonVariants } from "@/components/ui/button";
 import { mainNav, primaryCta } from "@/config/navigation";
 import { site } from "@/config/site";
-import { cn, telHref } from "@/lib/utils";
+import { cn, telHref, whatsappHref } from "@/lib/utils";
 import { isActive } from "./nav-links";
 
 export function MobileNav() {
@@ -51,6 +51,11 @@ export function MobileNav() {
             {site.contact.phone && (
               <a href={telHref(site.contact.phone)} className={buttonVariants({ variant: "outline", size: "lg", className: "w-full" })}>
                 Call {site.contact.phone}
+              </a>
+            )}
+            {site.contact.whatsapp && (
+              <a href={whatsappHref(site.contact.whatsapp)} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "lg", className: "w-full" })}>
+                WhatsApp {site.contact.whatsapp}
               </a>
             )}
           </div>
