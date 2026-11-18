@@ -7,9 +7,9 @@
  */
 
 /** Live production URL. Used when NEXT_PUBLIC_SITE_URL is missing or invalid. */
-const PRODUCTION_URL = "https://home-buzz.vercel.app";
+const PRODUCTION_URL = "https://www.homebuzzgroups.co.uk";
 
-/** Dot-separated labels of letters, digits and inner hyphens (e.g. "home-buzz.vercel.app"). */
+/** Dot-separated labels of letters, digits and inner hyphens (e.g. "www.homebuzzgroups.co.uk"). */
 const HOSTNAME_PATTERN = /^(?!-)[a-z\d-]{1,63}(?<!-)(\.(?!-)[a-z\d-]{1,63}(?<!-))+$/i;
 
 /**
