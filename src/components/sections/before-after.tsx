@@ -55,7 +55,7 @@ export function BeforeAfter() {
               <span>
                 <strong className="font-semibold text-navy">Illustrative photos.</strong> These are stock images of
                 different gardens, not Homebuzz projects. We&apos;ll share real before-and-after photos from our own jobs,
-                with customers&apos; permission, after we launch.
+                with customers&apos; permission, as we complete them.
               </span>
             </p>
           </div>

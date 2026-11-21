@@ -35,7 +35,7 @@ export function Testimonials({ tone = "white" }: { tone?: "white" | "paper" }) {
               id="reviews-title"
               eyebrow="Reviews"
               title="Real reviews, from real customers"
-              intro="We launch in March 2027, so we don't have customer reviews yet, and we won't make any up. Once we've cleared our first gardens, genuine reviews will appear here."
+              intro="We're a new business, so we don't have customer reviews yet, and we won't make any up. As we complete jobs, genuine reviews will appear here."
             />
             <ul className="grid gap-4 sm:grid-cols-2" aria-label="Review placeholders">
               {[0, 1].map((i) => (
@@ -46,7 +46,7 @@ export function Testimonials({ tone = "white" }: { tone?: "white" | "paper" }) {
                   <ChatRoundDotsOutlineIcon className="size-8 text-navy/35" aria-hidden />
                   <p>
                     <span className="eyebrow block text-navy/60">Placeholder</span>
-                    <span className="mt-2 block">A genuine customer review will go here after launch.</span>
+                    <span className="mt-2 block">A genuine customer review will go here soon.</span>
                   </p>
                 </li>
               ))}
