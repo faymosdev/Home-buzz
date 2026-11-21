@@ -41,7 +41,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Homebuzz"
         title="Making garden upkeep easier for everyone in Belfast"
-        intro="Homebuzz Gardening Services is a new Belfast business offering affordable garden clearance, green waste removal and maintenance across Northern Ireland. We launch in March 2027."
+        intro="Homebuzz Gardening Services is a new Belfast business offering affordable garden clearance, green waste removal and maintenance across Northern Ireland."
         image={images.gardenerAtWork}
       />
 
