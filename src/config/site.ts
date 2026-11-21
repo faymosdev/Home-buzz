@@ -86,7 +86,7 @@ export const site = {
 
   launch: {
     /** Shown in the header ribbon and hero. Set `show` to false after launch. */
-    show: true,
+    show: false,
     message: "Launching March 2027 — quote requests open now",
   },
 
