@@ -4,13 +4,11 @@ import {
   HandHeartOutlineIcon,
   HomeSmileOutlineIcon,
   LeafOutlineIcon,
-  ShieldCheckOutlineIcon,
   UsersGroupRoundedOutlineIcon,
 } from "@solar-icons/react";
 import { Container, Section, SectionHeading } from "@/components/layout/container";
 import { CtaBand } from "@/components/sections/cta-band";
 import { PageHero } from "@/components/sections/page-hero";
-import { Placeholder } from "@/components/ui/placeholder";
 import { images } from "@/config/images";
 import { primaryCta } from "@/config/navigation";
 import { site } from "@/config/site";
@@ -38,7 +36,6 @@ const impact = [
 ];
 
 export default function AboutPage() {
-  const { compliance } = site;
   return (
     <>
       <PageHero
@@ -158,34 +155,6 @@ export default function AboutPage() {
               </li>
             ))}
           </ul>
-        </Container>
-      </Section>
-
-      <Section tone="mint" labelledBy="credentials-title">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-            <SectionHeading
-              id="credentials-title"
-              eyebrow="Registrations and insurance"
-              title="The paperwork, stated plainly"
-              intro="We only publish registrations and insurance once they're confirmed."
-            />
-            <dl className="divide-y divide-navy/10 rounded-[1.75rem] border border-line bg-white px-7">
-              {[
-                { label: "Waste carrier registration", value: compliance.wasteCarrierRegistration, missing: "Registration number to be added once confirmed" },
-                { label: "Insurance", value: compliance.insurance, missing: "Insurance details to be added once a policy is in place" },
-                { label: "Business registration", value: compliance.companyRegistration, missing: "Business registration details to be added" },
-              ].map((row) => (
-                <div key={row.label} className="flex flex-col gap-2 py-5 sm:flex-row sm:items-center sm:justify-between">
-                  <dt className="flex items-center gap-2.5 font-semibold text-navy">
-                    <ShieldCheckOutlineIcon className="size-5 text-green" aria-hidden />
-                    {row.label}
-                  </dt>
-                  <dd className="text-muted-strong">{row.value ?? <Placeholder>{row.missing}</Placeholder>}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
         </Container>
       </Section>
 
