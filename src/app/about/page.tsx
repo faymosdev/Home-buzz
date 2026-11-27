@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import {
   HandHeartOutlineIcon,
   HomeSmileOutlineIcon,
@@ -10,6 +12,7 @@ import { CtaBand } from "@/components/sections/cta-band";
 import { PageHero } from "@/components/sections/page-hero";
 import { Placeholder } from "@/components/ui/placeholder";
 import { images } from "@/config/images";
+import { primaryCta } from "@/config/navigation";
 import { site } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 
@@ -74,21 +77,62 @@ export default function AboutPage() {
 
       <Section tone="paper" labelledBy="founder-title">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-20">
-            <div className="leaf-lg grid aspect-[4/5] place-items-center border-2 border-dashed border-navy/20 bg-white p-8 text-center">
-              <Placeholder>Photo of {site.founder} to be added</Placeholder>
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-20">
+            <div className="leaf-lg relative aspect-[4/5] overflow-hidden bg-mint lg:sticky lg:top-36">
+              <Image
+                src={images.founder.src}
+                alt={images.founder.alt}
+                fill
+                sizes="(min-width: 1024px) 35vw, 100vw"
+                className="object-cover"
+              />
             </div>
             <div>
-              <SectionHeading id="founder-title" eyebrow="Meet the founder" title={`Hello, I'm ${site.founder}`} />
+              <SectionHeading id="founder-title" eyebrow="Meet the founder" title="Why I started Homebuzz" />
               <div className="mt-6 space-y-5 text-lead text-muted-strong">
                 <p>
-                  I started Homebuzz to offer Belfast a garden clearance service that&apos;s affordable, reliable and kind, especially
-                  to people who need a bit of extra help.
+                  Hi, I&apos;m {site.founder}, a Belfast-based Queen&apos;s University student with a background in biomedical
+                  science, environmental science and microbiology, and the founder of {site.name}.
                 </p>
-                <Placeholder block>
-                  Founder story to be added by {site.founder}: why you started Homebuzz, your connection to Belfast, and what customers can
-                  expect when you arrive. Please don&apos;t add qualifications, experience or achievements unless they&apos;re accurate.
-                </Placeholder>
+                <p>
+                  I started this business after speaking with older people across Belfast who find it hard to keep up their
+                  gardens. Conditions such as arthritis and other musculoskeletal problems can make everyday gardening tasks
+                  physically demanding, painful or even impossible, and it&apos;s harder still for people living alone without
+                  regular support.
+                </p>
+                <p>
+                  According to Arthritis UK Northern Ireland (2026), more than 550,000 people in Northern Ireland, about 37% of
+                  the adult population, are living with arthritis or another musculoskeletal condition. The report also
+                  highlights the wider impact of these conditions:
+                </p>
+                <ul className="space-y-2 pl-1">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-3 size-2 shrink-0 rounded-full bg-green" aria-hidden />
+                    67% report that arthritis has affected their ability to work.
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-3 size-2 shrink-0 rounded-full bg-green" aria-hidden />
+                    76% say that waiting for treatment has negatively affected their mental health.
+                  </li>
+                </ul>
+                <p>When a garden gets out of hand, it becomes one more worry.</p>
+                <p>
+                  I also believe in greener, better-kept neighbourhoods. Tidy outdoor spaces make streets safer and more
+                  pleasant, and time outside is good for wellbeing. So I clear the garden, take everything away, and send green
+                  waste for composting or recycling wherever possible.
+                </p>
+                <p>
+                  You get a free written quote first, you never pay up front, and I offer reduced rates for older and disabled
+                  residents. Every job is personal. I listen to what matters most to you, agree the work and price in writing,
+                  and don&apos;t leave until it&apos;s done to a high standard.
+                </p>
+                <p>
+                  <Link href={primaryCta.href} className="font-semibold text-navy underline underline-offset-4">
+                    Send me a few photos of your garden
+                  </Link>{" "}
+                  and I&apos;ll get back to you with a free written quote.
+                </p>
+                <p className="font-display text-2xl font-semibold text-navy">{site.founder}</p>
               </div>
             </div>
           </div>
