@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  BuildingsOutlineIcon,
   HandHeartOutlineIcon,
   HomeSmileOutlineIcon,
   LeafOutlineIcon,
   UsersGroupRoundedOutlineIcon,
+  WindOutlineIcon,
 } from "@solar-icons/react";
 import { Container, Section, SectionHeading } from "@/components/layout/container";
 import { CtaBand } from "@/components/sections/cta-band";
@@ -28,11 +30,29 @@ const values = [
   { title: "Responsible", body: "Waste is handled properly. No shortcuts, and no fly-tipping." },
 ];
 
-const impact = [
-  { icon: HandHeartOutlineIcon, title: "Helping older and disabled residents", body: "Discounted, patient help for people who can't manage heavy garden work themselves." },
-  { icon: HomeSmileOutlineIcon, title: "Cleaner, safer neighbourhoods", body: "Overgrown gardens can hide hazards and attract fly-tipping. Clearing them helps the whole street." },
-  { icon: LeafOutlineIcon, title: "Responsible waste management", body: "Green waste goes to authorised sites for composting and recycling wherever possible." },
-  { icon: UsersGroupRoundedOutlineIcon, title: "Local employment", body: "As Homebuzz grows, we aim to create local jobs and work with local contractors." },
+/**
+ * Community and sustainability, grouped under the UN Sustainable Development Goals the
+ * client chose (8 and 11). Commitments only: no invented figures, awards or certifications.
+ */
+const sdgCommitments = [
+  {
+    goal: 8,
+    name: "Decent work and economic growth",
+    items: [
+      { icon: UsersGroupRoundedOutlineIcon, title: "Local employment", body: "As Homebuzz grows, we aim to create local jobs and work with local contractors." },
+      { icon: BuildingsOutlineIcon, title: "Supporting local property businesses", body: "We help landlords, letting agents and housing providers keep their properties presentable and ready to let." },
+    ],
+  },
+  {
+    goal: 11,
+    name: "Sustainable cities and communities",
+    items: [
+      { icon: HandHeartOutlineIcon, title: "Helping older and disabled residents", body: "Discounted, patient help for people who can't manage heavy garden work themselves." },
+      { icon: HomeSmileOutlineIcon, title: "Cleaner, safer neighbourhoods", body: "Overgrown gardens can hide hazards and attract fly-tipping. Clearing them helps the whole street." },
+      { icon: LeafOutlineIcon, title: "Responsible waste management", body: "Green waste goes to authorised sites for composting and recycling wherever possible. We never fly-tip." },
+      { icon: WindOutlineIcon, title: "Reducing our emissions", body: "We're committed to reducing the emissions from our work as we grow, and we'll share the specific steps we take here." },
+    ],
+  },
 ];
 
 export default function AboutPage() {
@@ -140,21 +160,43 @@ export default function AboutPage() {
         <Container>
           <SectionHeading
             id="impact-title"
-            eyebrow="Social impact"
+            eyebrow="Community and sustainability"
             title="Good for gardens, good for neighbourhoods"
-            intro="What we're setting out to do as a local business."
+            intro="As a local business, we've chosen to support two of the UN Sustainable Development Goals through the way we work."
           />
-          <ul className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2">
-            {impact.map(({ icon: Icon, title, body }) => (
-              <li key={title} className="flex gap-5 border-t border-line pt-7">
-                <Icon className="size-9 shrink-0 text-green" aria-hidden />
-                <div>
-                  <h3 className="text-h3">{title}</h3>
-                  <p className="mt-2 text-muted-strong">{body}</p>
+          <div className="mt-14 grid gap-6 lg:grid-cols-2">
+            {sdgCommitments.map(({ goal, name, items }) => (
+              <section key={goal} aria-labelledby={`sdg-${goal}-title`} className="rounded-[1.75rem] border border-line bg-paper p-7 sm:p-9">
+                <div className="flex items-center gap-4">
+                  <span className="grid size-14 shrink-0 place-items-center rounded-full bg-navy font-display text-2xl font-semibold text-white tabular" aria-hidden>
+                    {goal}
+                  </span>
+                  <div>
+                    <p className="eyebrow text-green">UN Sustainable Development Goal {goal}</p>
+                    <h3 id={`sdg-${goal}-title`} className="mt-1 text-h3">
+                      <span className="sr-only">Goal {goal}: </span>
+                      {name}
+                    </h3>
+                  </div>
                 </div>
-              </li>
+                <ul className="mt-8 space-y-7">
+                  {items.map(({ icon: Icon, title, body }) => (
+                    <li key={title} className="flex gap-4 border-t border-line pt-6">
+                      <Icon className="size-8 shrink-0 text-green" aria-hidden />
+                      <div>
+                        <h4 className="font-sans text-lg font-bold text-navy">{title}</h4>
+                        <p className="mt-1.5 text-muted-strong">{body}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </section>
             ))}
-          </ul>
+          </div>
+          <p className="mt-8 max-w-3xl text-sm text-muted">
+            These are commitments from a new local business, not certifications or awards. Homebuzz isn&apos;t affiliated with
+            or endorsed by the United Nations.
+          </p>
         </Container>
       </Section>
 
