@@ -87,7 +87,7 @@ Everything editable lives in **`src/config/`**. Change it there and every page u
 | `services.ts` | The 7 services (descriptions, suitable for, benefits, image) |
 | `faqs.ts` | All FAQ questions, categories, and which appear on the homepage |
 | `audiences.ts` | "Who we help" cards |
-| `testimonials.ts` | Customer reviews. **Genuine reviews only.** While empty, a "reviews coming soon" state shows |
+| `testimonials.ts` | Customer reviews. **Genuine reviews only.** While empty, the reviews section is hidden |
 | `navigation.ts` | Header, footer and legal links |
 | `images.ts` | Every photo and its alt text |
 
