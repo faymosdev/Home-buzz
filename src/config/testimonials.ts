@@ -2,8 +2,8 @@
  * Customer reviews.
  *
  * NEVER add invented reviews. Only add genuine reviews from real customers,
- * with their permission. While this list is empty, the site shows a clearly
- * labelled "reviews coming soon" section instead.
+ * with their permission. While this list is empty, the reviews section is
+ * hidden; add the first genuine review and it appears on the homepage.
  */
 export type Testimonial = {
   quote: string;
