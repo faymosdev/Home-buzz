@@ -31,4 +31,5 @@ export const images = {
   gardenerAtWork: img("gardener-at-work", "A person working on a planted bed outdoors", 1800, 1200),
   houseLawn: img("house-lawn", "A modern house with a tidy lawn and paved path", 1800, 1509),
   handsSoil: img("hands-soil", "Hands working in dark garden soil", 1800, 1493),
+  founder: img("founder-fortune", "Fortune, founder of Homebuzz Gardening Services", 800, 800),
 } satisfies Record<string, SiteImage>;
