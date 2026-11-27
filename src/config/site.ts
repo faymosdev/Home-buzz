@@ -70,7 +70,7 @@ export const site = {
 
   social: {
     facebook: null as string | null,
-    instagram: null as string | null,
+    instagram: "https://www.instagram.com/homebuzzgroups/" as string | null,
     nextdoor: null as string | null,
   },
 
